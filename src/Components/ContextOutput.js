@@ -5,9 +5,9 @@ import { useTheme } from "../hooks/useTheme.js";
 
 const ContextOutput = () => {
 
-  const { color } = useTheme();
+  const { color, changeColor } = useTheme();
 
-  return <div style={{ background: color }}>ContextOutput</div>;
+  return <div style={{ background: color }} onClick={() => changeColor('pink')}>ContextOutput</div>;
 };
 
 export default ContextOutput;
